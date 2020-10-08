@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<h1 style="text-align:center;">Upload Splunk's Log-Hashes on Besu</h1>
+
+<style>
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 2400px;
+    }
+    
+    .container img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .container .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(66, 96, 184);
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    .container .btn:hover {
+      background-color: black;
+    }
+    .container .sel {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-200%, -50%);
+      -ms-transform: translate(-70%, -50%);
+      background-color: rgb(66, 96, 184);
+      color: white;
+      font-size: 16px;
+      padding: 12px 34px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+      <img src="cool-background.svg" alt="Log-Hashes" style="width:100%">
+      <select class="sel" id="pastinterval" style="vertical-align: middle;">
+        <p>Select the timeinterval:</p>
+        <option value="1">1min</option>
+        <option value="3" selected="selected">3min</option>
+        <option value="5">5min</option>
+      </select>
+      <button class="btn" id="clickme" type="button">Upload Hash</button>
+    </div>
+  <script src="//cdn.muicss.com/mui-0.10.3/webcomponents/mui-webcomponents.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

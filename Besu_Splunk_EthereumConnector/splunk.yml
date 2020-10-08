@@ -1,0 +1,41 @@
+splunk:
+    conf:
+        indexes:
+            directory: /opt/splunk/etc/apps/search/local
+            content:
+                metrics:
+                    coldPath: $SPLUNK_DB/metrics/colddb
+                    datatype: metric
+                    homePath: $SPLUNK_DB/metrics/db
+                    maxTotalDataSizeMB: 1024
+                    thawedPath: $SPLUNK_DB/metrics/thaweddb
+                logs:
+                    coldPath: $SPLUNK_DB/logs/colddb
+                    datatype: event
+                    homePath: $SPLUNK_DB/logs/db
+                    maxTotalDataSizeMB: 1024
+                    thawedPath: $SPLUNK_DB/logs/thaweddb
+    
+        server:
+            directory: /opt/splunk/etc/system/local
+            content:
+                httpServer:
+                    crossOriginSharingPolicy: '*'
+        inputs:
+            directory: /opt/splunk/etc/system/local
+            content:
+                http:
+                    crossOriginSharingPolicy: '*'
+        web:
+            directory: /opt/splunk/etc/system/local
+            content:
+                settings:
+                    crossOriginSharingPolicy: '*'
+        
+            
+        
+            
+        
+        
+        
+     
