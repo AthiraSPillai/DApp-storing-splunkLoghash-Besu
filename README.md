@@ -49,7 +49,7 @@ Once the docker build is complete the app will be available at http://localhost:
 ```
 Step7: docker ps 
 
-To check all the containers are upmand running
+To check all the containers are up and running
 
 ```
 ### iii. Invoke Smart Contracts & DApp (with MetaMask) to store splunk's last 5 minutes _internal logs
@@ -59,12 +59,14 @@ To check all the containers are upmand running
 
 ![Image dapp](./DApp_LogHash/images/dapp_metamask.png)
 
-Open a new tab in your browser and go to `http://localhost:3001` select the time interval for the _internal logs and click the button , that will call the splunk REST endoint and render the _internal data
+Open a new tab in your browser and go to `http://localhost:3001` select the time interval for the _internal logs and click the button , that will call the splunk REST endoint and render the _internal data , hash it and stores it in blockchain by interacting with the smart contract
+
+![Image dapp](./DApp_LogHash/images/confirmed_transactions_onmetamask.png)
 
 
 (NOTE: I was experiencing CORS and Certificate Issue on the browser for going SPLUNKS REST point http://localhost:8089
 I have overcome CORS allow origin by adding * parameters to splunk.yml, certficate issue unfortunately I couldnt solve completely so I manually hit the API end point in the chrome browser for the first time  agreement and after that I can invoke contract for storing hash of the logfile from DApp )
-https://admin:changeme1@localhost:8089/services/search/jobs/export?earliest_time=-1m&latest_time=now&output_mode=raw&search=search%20index=_internal net::ERR_CERT_AUTHORITY_INVALID
+https://admin:changeme1@localhost:8089/services/search/jobs/export?earliest_time=-1m&latest_time=now&output_mode=raw&search=search%20index=_internal net::ERR_CERT_AUTHORITY_INVALID or you can use an ngrok service to avoid this error.
 
 ### iii. Viewing Logs on Splunk and creating Splunk Dashboard
 ![Image dapp](./DApp_LogHash/images/splunk_logs.png)
@@ -72,7 +74,8 @@ https://admin:changeme1@localhost:8089/services/search/jobs/export?earliest_time
 A copy of the dashboard is copied over to the project directory as dashboard.xml
 
 
-Ref
+Referencs:
 1:https://github.com/splunk/splunk-connect-for-ethereum
 2.https://docs.splunk.com/Documentation/Splunk/8.0.6/SearchTutorial/Aboutdashboards
-3.
+3.https://github.com/PegaSysEng/besu-sample-networks
+4.SplukApp for Quorum: https://www.youtube.com/watch?v=Fo2qaEn1_BQ
