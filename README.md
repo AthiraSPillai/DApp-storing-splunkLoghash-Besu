@@ -1,4 +1,4 @@
-# DApp for storing splunk's internal log hash on Besu
+# DApp for storing Splunk's internal log hash on Besu
 A Simple DApp that stores hash of Splunks internal logs on Besu for integrity check of data .Also monitor the Node health and Transaction details using custom dashboards
 
 ## Prerequisites
