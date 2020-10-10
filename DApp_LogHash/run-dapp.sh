@@ -36,7 +36,7 @@ npm install
 
 # compile the contracts
 truffle compile
-truffle migrate --network development
+truffle migrate --reset --network development
 truffle test --network development
 # dapp docker image
 docker build . -t besu-dapp-loghash
