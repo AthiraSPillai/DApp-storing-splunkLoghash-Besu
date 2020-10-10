@@ -1,4 +1,4 @@
-# DApp-storing-splunkLoghash-Besu
+# DApp for storing splunk's internal log hash on Besu
 A Simple DApp that stores hash of Splunks internal logs on Besu for integrity check of data .Also monitor the Node health and Transaction details using custom dashboards
 
 ## Prerequisites
@@ -12,6 +12,7 @@ A Simple DApp that stores hash of Splunks internal logs on Besu for integrity ch
 
 ## I. Private Besu development Network (PoW)Setup:
 The development network(POW Besu) has 4 nodes 1 boot node, 1 rpc node , one miner and 1 peer
+
 **To start services :**
 ```
 Step1: cd Besu_Nodes
@@ -19,11 +20,13 @@ Step2. `./run.sh`
         //This will starts all the docker containers in POW mode
 ```
 Wait for the network to be up because it creates the network and the same network is used by splunk and ethlogger to connect to
+
 **To stop services :**
 
 `./stop.sh` stops the entire network, and you can resume where it left off with `./resume.sh` 
 
 `./remove.sh ` will first stop and then remove all containers and images
+
 ## II.  Splunk Connector for Ethereum(Ethlogger and Splunk) setup
 
 Start splunk and Ethlogger by using command which will spin docker instances
